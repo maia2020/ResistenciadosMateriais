@@ -18,3 +18,38 @@ class Beam():
         self.forces.append(new_force)
 
 # Adicionar classes para apoios e esforcos. 
+
+class Support():
+
+    def __init__(self, pos, type, beam) -> None:
+        self.pos = pos
+
+        self.type = type
+        self.beam = beam
+
+        # Mais atributos a serem definidos pelo tipo?
+
+        self.set_type()
+
+    def set_type(self):
+        if self.type == '':
+            pass
+        elif self.type == '':
+            pass
+        elif self.type == '':
+            pass
+    # Definir os tipos de apoios e determinar atributos
+
+class Force:
+    
+    def __init__(self, pos, orientation, magnitude) -> None:
+        self.pos = pos
+        self.orient = orientation
+        self.mag = magnitude
+
+        #self.type = type ??? Caso seja forca ou torque
+    #def set_type(self):
+    #   if self.type == 'force ou f ou F':
+    #       pass
+    #   elif self.type == 'torque ou t ou T':
+    #       pass
