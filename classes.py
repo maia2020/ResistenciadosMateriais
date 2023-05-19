@@ -2,15 +2,15 @@
 
 class Beam():
 
-    def __init__(self, length, pos) -> None:
+    def __init__(self, pos, length) -> None:
         self.length = length
         self.pos = pos
 
         self.supports = []
         self.forces = []
 
-    def make_support(self, support_pos, type):
-        new_support = Support(support_pos, type, self)
+    def make_support(self, support_pos, sup_type):
+        new_support = Support(support_pos, sup_type, self)
         self.supports.append(new_support)
 
     def make_force(self, force_pos, orientation, magnitude):
@@ -21,10 +21,10 @@ class Beam():
 
 class Support():
 
-    def __init__(self, pos, type, beam) -> None:
+    def __init__(self, pos, sup_type, beam) -> None:
         self.pos = pos
 
-        self.type = type
+        self.type = sup_type
         self.beam = beam
 
         # Mais atributos a serem definidos pelo tipo?
